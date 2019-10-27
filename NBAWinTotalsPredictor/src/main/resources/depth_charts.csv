@@ -1,0 +1,430 @@
+pos,abbrev_player_name,projected_games,team_importance_rating,status
+START
+ATL
+PG1,Trae Young,77,1
+PG2,Evan Turner,74,6
+SG1,Kevin Huerter,78,2
+SG2,Cam Reddish,72,7
+SF1,De'Andre Hunter,76,3
+SF2,DeAndre' Bembry,70,8
+SF3,Alan Crabbe,58,9,I
+SF4,Vince Carter,80,10
+PF1,John Collins,71,4
+PF2,Jabari Parker,52,11
+PF4,Chandler Parsons,30,12
+C1,Alex Len,75,5
+START
+BOS
+PG1,Kemba Walker,77,1
+PG2,Carson Edwards,72,7
+SG1,Jaylen Brown,72,2
+SG2,Marcus Smart,72,6
+SG3,Romeo Langford,70,10
+SF1,Jaylen Tatum,79,3
+SF2,Grant Williams,75,9
+PF1,Gordon Hayward,72,4
+PF2,Semi Ojeleye,56,12
+C1,Daniel Theis,66,5
+C2,Enes Kanter,73,8
+C3,Robert Williams III,62,11
+START
+BKN
+PG1,Kyrie Irving,71,1
+PG2,Spencer Dinwiddie,70,6
+SG1,Joe Harris,75,2
+SG2,Garrett Temple,71,7
+SF1,Caris LeVert,64,3
+SF2,Dzanan Musa,64,8
+SF3,Wilson Chandler,46,10,I
+PF1,Taurean Prince,72,5
+PF2,Rodions Kurucs,72,9
+PF3,David Nwaba,52,13
+C1,Jarrett Allen,78,4
+C2,DeAndre Jordan,77,6
+C4,Henry Ellenson,70,11
+START
+CHA
+PG1,Terry Rozier,79,1
+PG2,Devonte' Graham,74,10
+PG3,Cody Martin,74,14
+SG1,Dwayn Bacon,70,2
+SG2,Malik Monk,74,6
+SF1,Miles Bridges,78,3
+SF2,Nicolas Batum,72,7
+SF3,Michael Kidd,Gilchrist,76,8
+PF1,P.J. Washington,75,4
+PF2,Marvin Williams,76,9
+C1,Cody Zeller,61,5
+C2,Willy Hernangomez,65,11
+C3,Bismack Biyombo,74,12
+START
+CHI
+PG1,Tomas Satoransky,74,1
+PG2,Kris Dunn,64,6
+PG5,Shaquille Harrison,67,11
+SG1,Zach LaVine,65,2
+SG2,Coby White,75,7
+SF1,Otto Porter Jr.,75,3
+SF2,Denzel Valentine,70,8
+SF3,Chandler Hutchison,44,13
+PF1,Lauri Markkanen,74,4
+PF2,Thaddeus Young,80,9
+PF3,Luke Kornet,45,10
+C1,Wendell Carter Jr.,69,5
+C2,Daniel Gafford,75,12
+START
+CLE
+PG1,Colin Sexton,77,1
+PG2,Darius Garland,72,9
+SG1,Brandon Knight,63,2
+SG2,Matthew Dellavedova,48,7
+SG3,Kevin Porter Jr.,69,10
+SF1,Cedi Osman,74,3
+SF2,Jordan Clarkson,81,8
+SF3,Dylan Windler,50,13,I
+PF1,Kevin Love,66,4
+PF2,Larry Nance Jr.,70,6
+C1,Tristan Thompson,73,5
+C2,John Henson,54,11
+C4,Ante Zizic,72,12,I
+START
+DAL
+PG1,Delon Wright,71,1
+PG2,Jalen Brunson,76,8
+PG4,J.J. Barea,62,12
+SG1,Luka Doncic,75,2
+SG2,Seth Curry,73,7
+SG3,Courtney Lee,68,13
+SF1,Justin Jackson,81,3
+SF2,Tim Hardaway Jr.,73,9
+PF1,Kristaps Porzingis,69,4
+PF2,Dorian Finney,Smith,11
+C1,Dwight Powell,81,5
+C2,Maxi Kleber,71,6
+C3,Boban Marjanovic,56,10
+START
+DEN,
+PG1,Jamal Murray,77,1
+PG2,Monte Morris,82,8
+SG1,Gary Harris,68,2
+SG2,Malik Beasley,74,7
+SG3,Torrey Craig,74,9
+SF1,Will Barton,73,4
+SF2,Michael Porter Jr.,63,11
+SF4,Juancho Hernangomez,70,12
+PF1,Paul Millsap,72,3
+PF2,Jerami Grant,80,6
+C1,Nikola Jokic,77,5
+C2,Miles Plumlee,79,10
+START
+DET
+PG1,Reggie Jackson,72,1
+PG2,Derrick Rose,56,6
+PG4,Tim Frazier,59,11
+SG1,Bruce Brown,76,2
+SG2,Luke Kennard,72,7
+SG3,Langston Galloway,73,10
+SF1,Tony Snell,74,3
+PF1,Blake Griffin,72,4,I
+PF2,Markieff Morris,71,8
+PF3,Thon Maker,66,9
+C1,Andre Drummond,79,5
+START
+GSW
+PG1,Stephen Curry,77,1
+PG2,Alec Burks,70,7
+SG1,Klay Thompson,17,2,I
+SG2,D'Angelo Russell,75,6
+SG3,Jordan Poole,75,10
+SG4,Jacob Evans,66,11
+SF1,Glen Robinson III,47,3
+PF1,Draymond Green,75,4
+PF2,Eric Paschall,12
+PF4,Omari Spellman,69,13
+C1,Kevon Looney,72,5,I
+C2,Willie Cauley,Stein,78,8,I
+C3,Marquese Chriss,73,9
+START
+HOU
+PG1,Russell Westbrook,79,1
+PG2,Austin Rivers,71,6
+PG3,Danuel House Jr.,69,10
+SG1,James Harden,77,2
+SG2,Ben McLemore,61,7
+SF1,Eric Gordon,72,3
+SF2,Thabo Sefolosha,59,8
+PF1,P.J. Tucker,81,4
+C1,Clint Capela,73,5
+C2,Tyson Chandler,66,9
+START
+IND
+PG1,Malcolm Brogdon,71,1
+PG2,Aaron Holiday,75,7
+PG3,T.J. McConnell,77,8
+SG1,Victor Oladipo,48,2,I
+SG1,Jeremy Lamb,78,6
+SF1,T.J. Warren,72,3
+SF2,Justin Holiday,76,9
+SF3,Doug McDermott,10
+PF1,Domantas Sabonis,74,4
+PF4,T.J. Leaf,58,11
+C1,Myles Turner,72,5
+C3,Gogo Bitadze,65,12
+START
+LAC
+PG1,Patrick Beverley,56,1
+SG1,Landry Shamet,77,2
+SG2,Lou Williams,77,9
+SG3,Jerome Robinson,10
+SF1,Kwahi Leonard,65,3
+SF2,Maurice Harkless,69,8
+SF3,Rodney McGruder,65,12
+PF1,Paul George,70,4,I
+PF2,Jeff Green,64,6
+PF6,Patrick Patterson,69,11
+C1,Ivica Zubac,63,5
+C2,Montrezl Harrell,80,7
+START
+LAL
+PG1,Rajon Rondo,65,5
+PG2,Quinn Cook,76,10
+SG1,Danny Green,75,1
+SG2,Kentavious Caldwell-Pope,78,8
+SG3,Avery Bradley,65,11
+SG4,Alex Caruso,65,9
+SG5,Troy Daniels,51,14
+SF1,Lebron James,73,2
+SF2,Kyle Kuzma,76,6,I
+SF4,Jared Dudley,59,12
+PF1,Anthony Davis,74,3
+C1,Dwight Howard,72,7
+C2,Javale McGee,74,4
+START
+MEM
+PG1,Ja Morant,71,1
+PG2,Tyus Jones,71,6
+PG3,De'Anthony Melton,50,10
+SG1,Dillon Brooks,71,2
+SG2,Grayson Allen,69,11
+SG3,Josh Jackson,78,12
+SF1,Kyle Anderson,73,3
+SF2,Jae Crowder,79,7
+PF1,Jaren Jackson Jr.,73,4
+PF2,Brandon Clarke,75,9
+C1,Jonas Valanciunas,69,5
+C2,Bruno Caboclo,55,8
+START
+MIA
+PG1,Justice Winslow,66,1
+PG2,Goran Dragic,64,8
+SG1,Tyler Herro,76,2
+SG2,Dion Waiters,62,7
+SF1,Jimmy Butler,71,3
+SF2,Derrick Jones Jr.,71,9
+PF1,Kelly Olynyk,78,4
+PF3,James Johnson,73,10
+C1,Bam Adebayo,77,5
+C3,Meyers Leonard,72,6
+C4,Udonis Haslem,40,11
+START
+MIL
+PG1,Eric Bledsoe,75,1
+PG2,George Hill,72,8
+PG3,Donte DiVincenzo,59,12
+SG1,Wesley Matthews,75,2
+SG2,Pat Connaughton,69,9
+SG3,Kyle Korver,70,13
+SF1,Kris Middleton,75,3
+SF2,Sterling Brown,68,7
+PF1,Giannis Antetokounmpo,80,4
+PF2,Ersan Ilyasova,70,6
+PF3,D.J. Wilson,48,11
+C1,Brook Lopez,77,5
+C2,Robin Lopez,76,10
+C5,Dragan Bender,68,14
+START
+MIN
+PG1,Jeff Teague,71,1
+PG2,Shabazz Napier,70,6
+SG1,Andrew Wiggins,77,2
+SG2,Josh Okogie,77,7
+SF1,Jake Layman,71,3
+SF2,Jarrett Culver,75,8
+PF1,Robert Covington,76,4
+PF2,Keita Bates-Diop,68,10
+PF3,Jordan Bell,65,11
+PF4,Noah Vonleh,71,12
+C1,Karl Anthony-Towns,80,5
+C2,Gorgui Dieng,78,9
+START
+NOP
+PG1,Lonzo Ball,67,1
+PG2,Nickeil Alexander,Walker,75,11
+PG3,Frank Jackson,64,12
+SG1,Jrue Holiday,78,2
+SG2,J.J. Redick,78,7
+SF1,Brandon Ingram,71,3
+SF3,E'Twaun Moore,53,10
+SF4,Josh Hart,70,9
+PF1,Zion Williamson,52,4,I
+PF4,Kenrich Williams,41,6
+C1,Derrick Favors,76,5
+C2,Jahlil Okafor,538
+C3,Jaxson Hayes,71,13
+START
+NYK
+PG1,Dennis Smith Jr.,68,1
+PG2,Elfrid Payton,76,6
+PG3,Emmanuel Mudiay,69,9
+PG4,Frank Ntilikina,43,15
+SG1,R.J. Barrett,76,2
+SG2,Reggie Bullock,7,63,I
+SG3,Wayne Ellington,70,11
+SG4,Allonzo Trier,71,14
+SF1,Marcus Morris,74,3
+SF2,Kevin Knox,77,8
+SF3,Damyean Dotson,74,13
+PF1,Julius Randle,73,4
+PF2,Bobby Portis,72,12
+C1,Mitchell Robinson,75,5
+C3,Taj Gibson,77,10
+START
+OKC
+PG1,Chris Paul,64,1
+PG3,Dennis Schroder,79,8
+SG1,Shai Gilgeous,Alexander,78,2
+SG2,Hamidou Diallo,69,9
+SF1,André Roberson,65,3,I
+SF2,Terrance Ferguson,74,7
+SF3,Abdel Nader,61,11
+PF1,Danillo Gallinari,64,4
+PF2,Mike Muscala,62,10
+C1,Steven Adams,79,5
+C2,Nerlens Noel,59,6
+START
+ORL
+PG1,D.J. Augustin,80,1
+PG2,Michael Carter,Williams,38,8
+PG3,Markelle Fultz,62,9
+SG1,Evan Fournier,74,2
+SG2,Terrence Ross,81,7
+SF1,Jonathon Isaac,75,3
+SF2,Al Farouq-Aminu,81,6
+PF1,Aaron Gordon,72,4
+C1,Nikola Vucevic,69,5
+C2,Mo Bamba,64,10
+C3,Khem Birch,50,11
+PHI
+PG1,Ben Simmons,80,1
+PG2,Shake Milton,50,9
+PG3,Trey Burke,51,12
+SG1,Josh Richardson,73,2
+SG2,Matisse Thybulle,67,6
+SG3,Zhaire Smith,71,11
+SG4,Frank Korkmaz,50,
+SF1,Tobias Harris,82,3
+SF2,James Ennis III,63,10
+PF1,Al Horford,72,4
+PF2,Mike Scott,69,7
+C1,Joel Embiid,69,5
+C2,Kyle O'Quinn,45,8
+PHO
+PG1,Ricky Rubio,75,1
+PG2,Jevon Carter,60,11
+PG3,Ty Jerome,60,12
+SG1,Devin Booker,71,2
+SG2,Tyler Johnson,69,7
+SF1,Kelly Oubre Jr.,75,3
+SF2,Mikal Bridges,79,6
+SF3,Cameron Johnson,69,10
+PF1,Dario Saric,79,4
+PF2,Frank Kaminsky,66,8
+C1,Deandre Ayton,54,5,I
+C2,Aaron Baynes,51,9
+START
+POR
+PG1,Damian Lillard,78,1
+PG2,Anfernee Simons,71,9
+SG1,C.J. McCollum,77,2
+SG2,Gary Trent Jr.,12
+SF1,Rodney Hood,73,3
+SF2,Kent Bazemore,74,7
+SF3,Mario Hezonja,69,8
+SF4,Nassir Little,63,13
+PF1,Zach Collins,75,4
+PF2,Anthony Tolliver,74,10
+C1,Hassan Whiteside,72,6
+C3,Pau Gasol,30,14,I
+C4,Skal Labissiere,60,11
+C6,Jusuf Nurkic,33,5,I
+START
+SAC
+PG1,De'Aaron Fox,79,1
+PG2,Cory Joseph,82,6
+SG1,Buddy Hield,82,2
+SG2,Bogdan Bogdanovic,70,7
+SG3,Yogi Ferrell,71,12
+SF1,Harrison Barnes,77,3
+SF2,Trevor Ariza,73,8
+PF1,Marvin Bagley III,71,4,I
+PF2,Nemanja Bjelica,77,10
+PF3,Henry Giles III,69,9
+C1,Dewayne Dedmon,72,5
+C2,Richaun Holmes,69,11
+START
+SAS
+PG1,Dejounte Murray,71,1
+PG2,Derrick White,76,6
+PG3,Patty Mills,80,7
+SG1,Byrn Forbes,82,3
+SG4,Marco Belinelli,75,10
+SF1,DeMar DeRozan,77,2
+SF2,DeMarre Carroll,74,8
+SF3,Lonnie Walker IV,67,11
+PF1,LaMarcus Aldridge,76,4
+PF2,Rudy Gay,69,9
+PF3,Trey Lyles,73,12
+C1,Jakob Poeltl,77,5
+START
+TOR
+PG1,Kyle Lowry,68,1
+SG1,Fred VanVleet,64,2
+SG2,Norman Powell,73,7
+SG4,Patrick McCaw,65,11
+SF1,O.G. Anunoby,72,3
+SF2,Stanley Johnson,69,8
+PF1,Pascal Siakam,79,4
+PF2,Rondae Hollis-Jefferson,59,9
+C1,Marc Gasol,76,5
+C2,Serge Ibaka,75,6
+C3,Chris Boucher,69,10
+START
+UTA
+PG1,Mike Conley,68,1
+PG2,Dante Exum,50,8,I
+SG1,Donovan Mitchell,78,2
+SF1,Bojan Bogdanovic,81,4
+SF2,Joe Ingles,82,7
+SF3,Royce O'Neale,77,3
+PF1,Jeff Green,77,4
+PF2,Georges Niang,59,10
+C1,Rudy Gobert,74,5
+C2,Ed Davis,75,9
+C3,Tony Bradley,65,11
+START
+WAS
+PG1,Ish Smith,68,1
+PG2,Isaiah Thomas,59,6
+SG1,Bradley Beal,81,2
+SG2,Jordan McRae,55,7,I
+SF1,CJ Miles,62,3,I
+SF2,Troy Brown Jr.,69,8,I
+SF3,Isaac Bonga,50,13
+PF1,Rui Hachimura,74,4
+PF2,Davis Bertans,76,9
+PF3,Moritz Wagner,43,10
+PF4,Admiral Schofield,55,12
+C1,Thoma Bryant,74,5
+C2,Ian Mahinmi,46,11,I
+
+
