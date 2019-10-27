@@ -14,5 +14,7 @@ public interface FileService {
 
     void extractPlayerProjections() throws FileNotFoundException;
 
-    void extractAllData() throws ParseException, InvalidFormatException, IOException;
+    void extractDepthCharts() throws FileNotFoundException;
+
+   String extractAllData() throws ParseException, InvalidFormatException, IOException;
 }
