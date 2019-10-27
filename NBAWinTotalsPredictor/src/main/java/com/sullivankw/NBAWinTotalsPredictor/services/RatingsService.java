@@ -3,9 +3,13 @@ package com.sullivankw.NBAWinTotalsPredictor.services;
 public interface RatingsService {
 
     /**
-     * Considering top 10 players as rotation players
+     * provide how deep of rotation you want to consider
      * **/
-    Double getProjectedTotalWarUsingOnlyRotationPlayers(String team);
+    Double getProjectedTotalWarUsingRotationPlayers(String team, int rotationDepth);
+    /**
+     * provide how deep of rotation you want to consider
+     * **/
+    Double getProjectedRaptorTotalPlusMinusRegUsingRotationPlayers(String team, int rotationDepth);
     int getProjectedWinTotals(String team);
     double getStrengthOfSchedule(String team);
 }
