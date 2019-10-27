@@ -4,15 +4,19 @@ import com.sullivankw.NBAWinTotalsPredictor.FileType;
 import com.sullivankw.NBAWinTotalsPredictor.Location;
 import com.sullivankw.NBAWinTotalsPredictor.Team;
 import com.sullivankw.NBAWinTotalsPredictor.entities.FiveThirtyEightRaptorPlayerRating;
+import com.sullivankw.NBAWinTotalsPredictor.entities.PlayerProjections;
+import com.sullivankw.NBAWinTotalsPredictor.entities.PlayerRotationRanking;
 import com.sullivankw.NBAWinTotalsPredictor.entities.TeamSchedule;
 import com.sullivankw.NBAWinTotalsPredictor.repos.FiveThirtyEightRaptorPlayerRatingRepo;
+import com.sullivankw.NBAWinTotalsPredictor.repos.PlayerProjectionsRepo;
+import com.sullivankw.NBAWinTotalsPredictor.repos.PlayerRotationRankingRepo;
 import com.sullivankw.NBAWinTotalsPredictor.repos.TeamScheduleRepo;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
+import org.springframework.util.StringUtils;
 
 import java.io.*;
 
@@ -29,12 +33,23 @@ public class FileServiceImpl implements FileService {
     @Autowired
     private FiveThirtyEightRaptorPlayerRatingRepo fiveThirtyEightRaptorPlayerRatingRepo;
 
+    @Autowired
+    private PlayerRotationRankingRepo playerRotationRankingRepo;
+
+    @Autowired
+    private PlayerProjectionsRepo playerProjectionsRepo;
+
     @Override
-    @Scheduled(fixedDelay = 800000)
-    public void extractAllData() throws ParseException, InvalidFormatException, IOException {
-        extractSeasonSchedules();
-        extractRaptorPlayerRatings();
-        extractPlayerProjections();
+    public String extractAllData() throws ParseException, InvalidFormatException, IOException {
+        try {
+            extractSeasonSchedules();
+            extractRaptorPlayerRatings();
+            extractPlayerProjections();
+            extractDepthCharts();
+            return "SUCCESS";
+        } catch (Exception e) {
+            return "FAILED";
+        }
 
     }
 
@@ -119,7 +134,60 @@ public class FileServiceImpl implements FileService {
                 }
                 if (counter > 0) {
                     String[] row = line.split(cvsSplitBy);
-                    insertPlayerIntoDB(row, FileType.CSV_2020_PLAYER_PROJECTIONS);
+                    PlayerProjections playerProjections = new PlayerProjections(row);
+                    playerProjectionsRepo.save(playerProjections);
+                }
+                counter++;
+            }
+        } catch (Exception e) {
+
+        }
+
+    }
+
+    @Override
+    public void extractDepthCharts() throws FileNotFoundException {
+        File file = ResourceUtils.getFile("classpath:depth_charts.csv");
+        BufferedReader br = null;
+        String line = "";
+        String cvsSplitBy = ",";
+        boolean readFile = true;
+        boolean nextLineIsTeam = false;
+        String team = "";
+
+        try {
+
+            try {
+                br = new BufferedReader(new FileReader(file));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            int counter = 0;
+            while (readFile) {
+                try {
+                    if (!((line = br.readLine()) != null))
+                        readFile = false;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                if (counter > 0) {
+                    String[] row = line.split(cvsSplitBy);
+                    PlayerRotationRanking playerRotationRanking = null;
+                    for (String value : row) {
+                        if (value.equalsIgnoreCase("START")) {
+                            //then we want the team name from next line
+                            nextLineIsTeam = true;
+                            continue;
+                        }
+                        if (nextLineIsTeam) {
+                            team = value;
+                            nextLineIsTeam = false;
+                            continue;
+                        }
+                        playerRotationRanking = new PlayerRotationRanking(Team.getEnumByName(team), row);
+                        playerRotationRankingRepo.save(playerRotationRanking);
+                        break;
+                    }
                 }
                 counter++;
             }
@@ -135,7 +203,6 @@ public class FileServiceImpl implements FileService {
     }
 
     private void getTeamSchedule(Sheet sheet, DataFormatter dataFormatter, Team team, int cellPosition) throws ParseException {
-        System.out.println("TEAM - " + team.name());
         Location loc = null;
         String cleanedOpponent, cleanedGameTime, opponent, gameTime, cleanedOpponentNoAts = "";
         char firstCharOfDate = '9';
@@ -145,6 +212,16 @@ public class FileServiceImpl implements FileService {
             cleanedGameTime = gameTime.trim().toUpperCase().substring(3, gameTime.length());
             opponent = dataFormatter.formatCellValue(row.getCell(cellPosition));
             cleanedOpponent = opponent.trim().toUpperCase();
+            if (cleanedOpponent.equalsIgnoreCase("@ NY")) {
+                cleanedOpponent = "@ NYK";
+            } else if (cleanedOpponent.equalsIgnoreCase("@ UTH")) {
+                cleanedOpponent = "@ UTA";
+            } else if (cleanedOpponent.equalsIgnoreCase("@ SA")) {
+                cleanedOpponent = "@ SAS";
+            } else if (cleanedOpponent.equalsIgnoreCase("@ NOR")) {
+                cleanedOpponent = "@ NOP";
+            }
+
             if (gameTime.equalsIgnoreCase("DATE")) {
                 continue;
             }
@@ -189,11 +266,18 @@ public class FileServiceImpl implements FileService {
     }
 
     private int getTeamCellPosition(Sheet sheet, DataFormatter dataFormatter, Team team) {
+        String excelTeamNameVersion = Team.getAlternativeTeamAbbrev(team);
+        String teamNameToCheck;
+        if (StringUtils.isEmpty(excelTeamNameVersion)) {
+            teamNameToCheck = team.name();
+        } else {
+            teamNameToCheck = excelTeamNameVersion;
+        }
         int cellCount = 0;
         String cellValue = null;
         for (Cell cell : sheet.getRow(0)) {
             cellValue = dataFormatter.formatCellValue(cell);
-            if (cellValue.equalsIgnoreCase(team.name())) {
+            if (cellValue.equalsIgnoreCase(teamNameToCheck)) {
                 break;
             }
             cellCount++;
