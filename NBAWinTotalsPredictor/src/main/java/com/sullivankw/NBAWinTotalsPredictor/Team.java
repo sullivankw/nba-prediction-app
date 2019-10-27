@@ -1,5 +1,9 @@
 package com.sullivankw.NBAWinTotalsPredictor;
 
+import java.util.ArrayList;
+import java.util.List;
+
+//note that the excel file uses a few non traditional team abbrev to correct for
 public enum Team {
     ATL,
     BOS,
@@ -19,17 +23,17 @@ public enum Team {
     MIA,
     MIL,
     MIN,
-    NO,
-    NY,
+    NOP, //NOR
+    NYK, //NY
     OKC,
     ORL,
     PHI,
     PHO,
     POR,
     SAC,
-    SA,
+    SAS, //SA
     TOR,
-    UTH,
+    UTA, //UTH
     WAS;
 
     public static Team[] getTeams() {
@@ -42,7 +46,7 @@ public enum Team {
         return teams;
     }
 
-    public static Team findByTeam(String teamName) {
+    public static Team getEnumByName(String teamName) {
         for (Team team : Team.values()) {
             if (teamName.equalsIgnoreCase(team.name())) {
                 return team;
@@ -51,5 +55,30 @@ public enum Team {
         return null;
     }
 
+    public static String getAlternativeTeamAbbrev(Team team) {
+        List<Team> altTeams = new ArrayList<Team>(); {
+            altTeams.add(NOP);
+            altTeams.add(NYK);
+            altTeams.add(SAS);
+            altTeams.add(UTA);
+        }
+        for (Team t : altTeams) {
+            if (t.name().equalsIgnoreCase(team.name())) {
+                switch (team) {
+                    case NOP:
+                        return "NO";
+                    case NYK:
+                        return "NY";
+                    case SAS:
+                        return "SA";
+                    case UTA:
+                        return "UTH";
+                        default:
+                            break;
+                }
+            }
+        }
+        return null;
+    }
 
 }
